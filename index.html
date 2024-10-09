@@ -102,81 +102,38 @@
         </div>
 
         <!-- F01CPPNP -->
-        <iframe id="map" src="https://www.google.com/maps/d/embed?mid=1tK3-61w1L4F9BhPIc5BVKirh_wKRr98&ehbc=2E312F" width="864" height="600"></iframe>
+        <iframe id="map" src="https://www.google.com/maps/d/u/0/embed?mid=1tK3-61w1L4F9BhPIc5BVKirh_wKRr98&ehbc=2E312F" width="864" height="600"></iframe>
 
         <h4>Pilih Lokasi:</h4>
-        <button class="location-btn" onclick="goToLocation(0)">Gedung F</button>
+        <button class="location-btn" onclick="goToLocation(0)">Gedung PKM</button>
         <button class="location-btn" onclick="goToLocation(1)">Gedung E</button>
-        <button class="location-btn" onclick="goToLocation(2)">Gedung AB</button>
-        <button class="location-btn" onclick="goToLocation(3)">Gedung C</button>
-        <button class="location-btn" onclick="goToLocation(4)">Gedung B</button>
-        <button class="location-btn" onclick="goToLocation(5)">Gedung Z</button>
-        <button class="location-btn" onclick="goToLocation(6)">Gedung G</button>
-        <button class="location-btn" onclick="goToLocation(7)">Gedung W</button>
-        <button class="location-btn" onclick="goToLocation(8)">Gedung AC</button>
-        <button class="location-btn" onclick="goToLocation(9)">Kolam Sipil</button>
-        <button class="location-btn" onclick="goToLocation(10)">Lapangan Futsal</button>
-        <button class="location-btn" onclick="goToLocation(11)">Gedung L</button>
-        <button class="location-btn" onclick="goToLocation(12)">Gedung M</button>
-        <button class="location-btn" onclick="goToLocation(13)">Gedung N</button>
-        <button class="location-btn" onclick="goToLocation(14)">Gedung V</button>
-        <button class="location-btn" onclick="goToLocation(15)">Gedung U</button>
-        <button class="location-btn" onclick="goToLocation(16)">Gedung K</button>
-        <button class="location-btn" onclick="goToLocation(17)">Gedung T</button>
-        <button class="location-btn" onclick="goToLocation(18)">Gedung S</button>
-        <button class="location-btn" onclick="goToLocation(19)">Gedung R</button>
-        <button class="location-btn" onclick="goToLocation(20)">Gedung H</button>
-        <button class="location-btn" onclick="goToLocation(21)">Gedung Q</button>
-        <button class="location-btn" onclick="goToLocation(22)">Gedung X</button>
-        <button class="location-btn" onclick="goToLocation(23)">Gedung Y (Masjid)</button>
-        <button class="location-btn" onclick="goToLocation(24)">Gedung J</button>
-        <button class="location-btn" onclick="goToLocation(25)">Gedung O</button>
-        <button class="location-btn" onclick="goToLocation(26)">Gedung P</button>
-        <button class="location-btn" onclick="goToLocation(27)">Parkiran</button>
-        <button class="location-btn" onclick="goToLocation(28)">PKM</button>
+        <button class="location-btn" onclick="goToLocation(2)">Gedung F</button>
         
+        <!-- Script untuk memodifikasi peta -->
         <script>
-            // F01CPPNP
+            // Daftar lokasi (Lat, Lng) yang akan dipilih
             const locations = [
-                { name: "Gedung F", lat: -0.91328, lng: 100.46698 },
+                { name: "Gedung PKM", lat: -0.91456, lng: 100.46615 },
                 { name: "Gedung E", lat: -0.91306, lng: 100.46696 },
-                { name: "Gedung AB", lat: -0.91376, lng: 100.4671 },
-                { name: "Gedung C", lat: -0.91332, lng: 100.46612 },
-                { name: "Gedung B", lat: -0.91371, lng: 100.46605 },
-                { name: "Gedung Z", lat: -0.91422, lng: 100.46612 },
-                { name: "Gedung G", lat: -0.91376, lng: 100.46534 },
-                { name: "Gedung W", lat: -0.91408, lng: 100.46652 },
-                { name: "Gedung AC", lat: -0.91403, lng: 100.46613 },
-                { name: "Kolam Sipil", lat: -0.91381, lng: 100.46568 },
-                { name: "Lapangan Futsal", lat: -0.91398, lng: 100.46621 },
-                { name: "Gedung L", lat: -0.91357, lng: 100.46662 },
-                { name: "Gedung M", lat: -0.91414, lng: 100.46594 },
-                { name: "Gedung N", lat: -0.91386, lng: 100.46571 },
-                { name: "Gedung V", lat: -0.91405, lng: 100.46544 },
-                { name: "Gedung U", lat: -0.91348, lng: 100.46627 },
-                { name: "Gedung K", lat: -0.91329, lng: 100.46681 },
-                { name: "Gedung T", lat: -0.91357, lng: 100.46608 },
-                { name: "Gedung S", lat: -0.91376, lng: 100.46523 },
-                { name: "Gedung R", lat: -0.91398, lng: 100.46603 },
-                { name: "Gedung H", lat: -0.91375, lng: 100.46564 },
-                { name: "Gedung Q", lat: -0.91403, lng: 100.46649 },
-                { name: "Gedung X", lat: -0.91406, lng: 100.4659 },
-                { name: "Gedung Y (Masjid)", lat: -0.9136, lng: 100.4658 },
-                { name: "Gedung J", lat: -0.91402, lng: 100.46622 },
-                { name: "Gedung O", lat: -0.91378, lng: 100.46609 },
-                { name: "Gedung P", lat: -0.91424, lng: 100.46674 },
-                { name: "Parkiran", lat: -0.91407, lng: 100.46635 },
-                { name: "PKM", lat: -0.91403, lng: 100.46571 }
+                { name: "Gedung F", lat: -0.91328, lng: 100.46698 }
             ];
 
-            // F01CPPNP
+            // Fungsi untuk mengarahkan iframe ke lokasi tertentu
             function goToLocation(index) {
-                const loc = locations[index];
-                const mapFrame = document.getElementById("map");
-                mapFrame.src = `https://www.google.com/maps?q=${loc.lat},${loc.lng}&z=18&output=embed`;
+                const location = locations[index];
+                const baseUrl = "https://www.google.com/maps/d/u/0/embed?mid=1tK3-61w1L4F9BhPIc5BVKirh_wKRr98&ehbc=2E312F";
+                
+                // Memodifikasi URL iframe untuk mengarahkan ke lokasi yang dipilih
+                const iframe = document.getElementById("map");
+                iframe.src = `${baseUrl}&ll=${location.lat},${location.lng}&z=17`;  // Set lokasi dan zoom (z=17)
             }
         </script>
 
-    </div>    
+    </div><!-- F01CPPNP -->
+
+    <!-- Core & App JS -->
+    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/js/dorang.js"></script>
+
 </body>
 </html>
