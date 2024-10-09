@@ -109,23 +109,23 @@
         <button class="location-btn" onclick="goToLocation(1)">Gedung E</button>
         <button class="location-btn" onclick="goToLocation(2)">Gedung F</button>
         
-        <!-- Script untuk memodifikasi peta -->
+
         <script>
-            // Daftar lokasi (Lat, Lng) yang akan dipilih
+
             const locations = [
                 { name: "Gedung PKM", lat: -0.91456, lng: 100.46615 },
                 { name: "Gedung E", lat: -0.91306, lng: 100.46696 },
                 { name: "Gedung F", lat: -0.91328, lng: 100.46698 }
             ];
 
-            // Fungsi untuk mengarahkan iframe ke lokasi tertentu
+
             function goToLocation(index) {
                 const location = locations[index];
                 const baseUrl = "https://www.google.com/maps/d/u/0/embed?mid=1tK3-61w1L4F9BhPIc5BVKirh_wKRr98&ehbc=2E312F";
                 
-                // Memodifikasi URL iframe untuk mengarahkan ke lokasi yang dipilih
+
                 const iframe = document.getElementById("map");
-                iframe.src = `${baseUrl}&ll=${location.lat},${location.lng}&z=17`;  // Set lokasi dan zoom (z=17)
+                iframe.src = `${baseUrl}&ll=${location.lat},${location.lng}&z=50`; 
             }
         </script>
 
